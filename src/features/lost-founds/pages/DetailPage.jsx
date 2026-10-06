@@ -63,6 +63,7 @@ function DetailPage() {
   if (!profile || !lostFound) {
     return (
       <div className="flex flex-col items-center justify-center py-20">
+        <h1 className="sr-only">Memuat detail laporan...</h1>
         <div className="w-8 h-8 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin" />
       </div>
     );
