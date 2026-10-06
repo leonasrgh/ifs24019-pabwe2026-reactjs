@@ -206,10 +206,10 @@ function ProfilePage() {
 
           <form onSubmit={handleUpdateProfile} className="space-y-4">
             <div>
-              <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">
+              <label htmlFor="profile-name-input" className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">
                 Nama Lengkap
               </label>
-              <input
+              <input id="profile-name-input"
                 type="text"
                 data-testid="profile-name-input"
                 value={name}
@@ -220,10 +220,10 @@ function ProfilePage() {
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">
+              <label label htmlFor="profile-email-input" className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">
                 Alamat Email
               </label>
-              <input
+              <input id="profile-email-input"
                 type="email"
                 data-testid="profile-email-input"
                 value={email}

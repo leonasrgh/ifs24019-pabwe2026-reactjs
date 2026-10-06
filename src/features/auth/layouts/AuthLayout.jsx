@@ -32,14 +32,14 @@ function AuthLayout() {
   const isLoginActive = location.pathname === "/auth/login";
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-indigo-50/40 to-slate-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 via-indigo-50/40 to-slate-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md text-center">
         <div className="inline-flex w-14 h-14 rounded-2xl bg-gradient-to-tr from-indigo-600 to-cyan-500 items-center justify-center text-white shadow-xl shadow-indigo-500/25 mb-3">
           <IconChecklist size={32} stroke={2.5} />
         </div>
-        <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
+        <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">
           Delcom Lost & Found
-        </h2>
+        </h1>
         <p className="mt-1 text-sm text-slate-500">
           Aplikasi Pengelola Tugas & Autentikasi Modern
         </p>
@@ -74,7 +74,7 @@ function AuthLayout() {
           <Outlet />
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 

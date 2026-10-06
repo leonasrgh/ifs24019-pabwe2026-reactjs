@@ -179,15 +179,15 @@ function HomePage() {
               className="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs flex items-center justify-between"
             >
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+                <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">
                   {card.label}
                 </p>
-                <h3
+                <p
                   data-testid={`stat-${card.id}`}
                   className={`text-3xl font-black mt-1 ${card.color}`}
                 >
                   {card.value}
-                </h3>
+                </p>
               </div>
               <div className={`w-12 h-12 rounded-2xl flex items-center justify-center ${card.bg}`}>
                 <Icon size={26} stroke={2} />
@@ -243,6 +243,7 @@ function HomePage() {
             </div>
             <select
               data-testid="filter-completed-select"
+              aria-label="Filter status penyelesaian"
               value={completedFilter}
               onChange={(e) => setCompletedFilter(e.target.value)}
               className="px-3 py-2 text-xs font-semibold rounded-xl border border-slate-200 bg-white text-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
@@ -269,14 +270,14 @@ function HomePage() {
             <tbody className="divide-y divide-slate-100">
               {loading && filtered.length === 0 ? (
                 <tr>
-                  <td colSpan={6} className="px-6 py-12 text-center text-slate-400">
+                  <td colSpan={6} className="px-6 py-12 text-center text-slate-600">
                     <IconLoader2 size={36} className="mx-auto text-indigo-600 animate-spin mb-2" />
                     <p className="font-medium text-slate-600">Memuat laporan...</p>
                   </td>
                 </tr>
               ) : filtered.length === 0 ? (
                 <tr>
-                  <td colSpan={6} className="px-6 py-12 text-center text-slate-400">
+                  <td colSpan={6} className="px-6 py-12 text-center text-slate-600">
                     <IconPackage size={40} className="mx-auto text-slate-300 mb-2" />
                     <p className="font-medium">Belum ada laporan yang cocok.</p>
                   </td>
@@ -300,7 +301,7 @@ function HomePage() {
                         <div>
                           <p className="font-semibold text-slate-800 leading-snug">{item.title}</p>
                           {item.description && (
-                            <p className="text-xs text-slate-400 line-clamp-1 mt-0.5">
+                            <p className="text-xs text-slate-600 line-clamp-1 mt-0.5">
                               {item.description}
                             </p>
                           )}
@@ -395,7 +396,7 @@ function HomePage() {
         </div>
 
         {statsRows.length === 0 ? (
-          <p data-testid="stats-empty" className="text-sm text-slate-400 text-center py-6">
+          <p data-testid="stats-empty" className="text-sm text-slate-600 text-center py-6">
             Belum ada data statistik.
           </p>
         ) : (
